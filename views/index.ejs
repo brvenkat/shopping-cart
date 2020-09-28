@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form action="/add" method="post">
+          <input name="retailer" type="text" placeholder="Enter Name" required>Customer Name</input><br>
+          <br>
+          <input name="Classic Ad" type="text" placeholder="Enter Quanity">Classic</input><br>
+          <br>
+          <input name="Stand out Ad" type="text" placeholder="Enter Quantity">StandOut</input><br>
+          <br>
+          <input name="Premium Ad" type="text" placeholder="Enter Quantity">Premium</input><br>
+          <br>
+          <input type="submit" class="ghost-button" value="Add">
+          <br>
+        </form>
+        <form action="/total" method="post">
+          <input type="submit" class="ghost-button" value="Total">
+        </form>
+        <% if(addedItems !== null) { %>
+          <p>Customer: <%= customer %></p>
+          <p>Items: <%= addedItems %></p>
+        <% } %>
+        <% if(total !== null) { %>
+          <p>Total: <%= total %></p>
+        <% } %>
+      </fieldset>
+    </div>
+  </body>
